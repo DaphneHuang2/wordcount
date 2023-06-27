@@ -1,0 +1,19 @@
+Implement a program to count the frequency of each word in a given text:
+python
+Copy code
+def count_word_frequency(text):
+    words = text.lower().split()
+    frequency = {}
+    for word in words:
+        if word in frequency:
+            frequency[word] += 1
+        else:
+            frequency[word] = 1
+    return frequency
+
+input_text = input("Enter a text: ")
+word_frequency = count_word_frequency(input_text)
+
+print("Word frequency:")
+for word, count in word_frequency.items():
+    print(word, ":", count)
